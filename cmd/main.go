@@ -2,6 +2,7 @@ package main
 
 import (
 	"log"
+	"time"
 
 	internal "github.com/rogaliiik/playlist/internal/playlist"
 )
@@ -17,8 +18,13 @@ func main() {
 
 	go p.Broadcast()
 	p.Play()
+	time.Sleep(time.Second * 3)
 	p.AddSong(internal.NewSong("Song 4", 1))
 	err := p.Prev()
+	if err != nil {
+		log.Println(err)
+	}
+	err = p.Next()
 	if err != nil {
 		log.Println(err)
 	}
