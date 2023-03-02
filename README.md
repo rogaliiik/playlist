@@ -53,5 +53,7 @@ go build -o playlist.exe ./cmd
 $ ./playlist.exe
 ```
 
+### Часть 2: https://github.com/rogaliiik/playlist-api-v2
+
 ### Выполнил
 Артём Галкин igalart2000@gmail.com
